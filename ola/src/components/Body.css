@@ -1,13 +1,40 @@
 .Body{
-    background-color: rgb(50, 116, 116);
+    background: color #333;;
     min-height: calc(100vh - 70px);
-
     display: flex;
-    flex-direction: column;
     justify-content: flex-start;
     align-items: center;
 }
 
-.titulo02{
-    border: 1px solid #000;
+.card {
+    border: 1px solid #ccc;
+    border-radius: 1rem;
+    transition: transform 0. 3s ease;
+    background-color: #f0f0f0;
+    text-align: center;
+    max-height: 300px;
+}
+.card:hover {
+    transform: scale(1.05);
+}
+.card img{
+    width: 100px;
+    height: auto;
+    border-radius: 4px;
+}
+
+.noImage {
+    width: 100px;
+    height: 200px;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #555;
+
+}
+
+.card h2
+.card p{
+    color: #555;
 }

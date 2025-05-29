@@ -1,13 +1,21 @@
-import React from 'react'
-import './Body.css'
+import './Body.css';
+function Body(props) {
+  console.log(props.caracters);
 
-function Body() {
   return (
-    <div className='Body'>
-        <h2 className='titulo02'>Dinos são legais</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis velit totam numquam! Nobis quis veritatis atque a voluptates obcaecati, libero repudiandae maiores quasi laborum suscipit nulla vel veniam nisi sapiente.</p>
+    <div className='body'>
+      {props.characters.map((character) =>(
+        <div className='card'>
+          {character.image()}
+          <img src={character.image} alt={character.name} />
+          <div className='noImage'>Imagem indisponível</div>
+          <h2>personagem</h2>
+          <p>
+            <strong>Casa:</strong>Desconhecida
+          </p>
+        </div>
+      ))}
     </div>
-  )
-}
-
+  )}
+    
 export default Body
